@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-korekta | Profesjonalna konserwacja i detailing samochodowy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .logo-container {
+            background-color: transparent;
+        }
+        .logo-img {
+            max-height: 80px;
+            filter: brightness(0) invert(1);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
+        }
+        .map-container {
+            height: 400px;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-800">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="logo-container">
+                    <img src="https://scontent-waw2-2.xx.fbcdn.net/v/t39.30808-6/476448453_1077192901088148_4197247390723262721_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=-JB8S6Zm7pEQ7kNvwEAfmex&_nc_oc=Adl5I-LbkHQNteNA9f1KAcQPZNjxaAzEBH0IxqvMfn45xa6sym_PckTqfUxXhYYS1-E&_nc_zt=23&_nc_ht=scontent-waw2-2.xx&_nc_gid=o9_wotJMjgIBV8XH5jKdMg&oh=00_AfbMflc73Ucea-8if3FLho4Avzxyh_hIsm6dKodlVvgGSA&oe=68D42FCD" alt="Auto-korekta Logo" class="logo-img">
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold">Auto-korekta</h1>
+                    <p class="text-sm text-gray-400">Profesjonalna konserwacja i detailing samochodowy</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#services" class="hover:text-red-500 transition">Usługi</a>
+                <a href="#about" class="hover:text-red-500 transition">O nas</a>
+                <a href="#contact" class="hover:text-red-500 transition">Kontakt</a>
+            </nav>
+            <div class="flex space-x-4">
+                <a href="tel:576953244" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg flex items-center transition">
+                    <i data-feather="phone" class="mr-2"></i> Zadzwoń
+                </a>
+                <button class="md:hidden" id="mobile-menu-button">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95 backdrop-blur-sm border-t border-gray-800">
+            <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+                <a href="#services" class="hover:text-red-500 transition">Usługi</a>
+                <a href="#about" class="hover:text-red-500 transition">O nas</a>
+                <a href="#contact" class="hover:text-red-500 transition">Kontakt</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/60 z-10"></div>
+        <img src="http://static.photos/automotive/1920x1080/1" alt="Detailing samochodowy" class="w-full h-[70vh] object-cover">
+        <div class="absolute inset-0 z-20 flex items-center justify-center">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4" data-aos="fade-up">Profesjonalna pielęgnacja Twojego samochodu</h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">Zadbamy o Twój pojazd jak o własny</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="#contact" class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition">Umów wizytę</a>
+                    <a href="#services" class="bg-transparent border-2 border-white hover:bg-white/10 text-white px-8 py-3 rounded-lg text-lg font-semibold transition">Nasze usługi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nasze Usługi</h2>
+                <div class="w-20 h-1 bg-red-600 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-gray-800 rounded-xl p-6 transition duration-300" data-aos="fade-up">
+                    <div class="bg-red-600/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <i data-feather="shield" class="text-red-500 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Konserwacja podwozia</h3>
+                    <p class="text-gray-400">Kompleksowa ochrona podwozia przed korozją i szkodliwymi czynnikami zewnętrznymi.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card bg-gray-800 rounded-xl p-6 transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-red-600/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <i data-feather="droplet" class="text-red-500 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Czyszczenie wnętrza</h3>
+                    <p class="text-gray-400">Głębokie czyszczenie i pranie tapicerki, usuwanie trudnych zabrudzeń i nieprzyjemnych zapachów.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card bg-gray-800 rounded-xl p-6 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-red-600/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <i data-feather="sun" class="text-red-500 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Polerowanie lakieru</h3>
+                    <p class="text-gray-400">Profesjonalne usuwanie rys, przywracanie blasku i ochrona lakieru.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card bg-gray-800 rounded-xl p-6 transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-red-600/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <i data-feather="layers" class="text-red-500 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Powłoki ceramiczne</h3>
+                    <p class="text-gray-400">Trwała ochrona lakieru dzięki najwyższej jakości powłokom ceramicznym i woskom.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <img src="http://static.photos/automotive/640x360/2" alt="O nas" class="rounded-xl shadow-2xl">
+                </div>
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">O Nas</h2>
+                    <p class="text-lg mb-6 text-gray-300">Auto-korekta Krzysztof Szafraniec to firma zajmująca się profesjonalnym dbaniem o samochody, zapewniając kompleksową ochronę, czystość i estetykę Twojego pojazdu.</p>
+                    <p class="text-lg mb-6 text-gray-300">Dzięki wieloletniemu doświadczeniu i pasji do motoryzacji, oferujemy usługi na najwyższym poziomie, wykorzystując specjalistyczne preparaty i profesjonalny sprzęt.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <div class="bg-red-600/10 p-2 rounded-full mr-3">
+                                <i data-feather="check-circle" class="text-red-500 w-5 h-5"></i>
+                            </div>
+                            <span>Profesjonalizm</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-red-600/10 p-2 rounded-full mr-3">
+                                <i data-feather="check-circle" class="text-red-500 w-5 h-5"></i>
+                            </div>
+                            <span>Doświadczenie</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-red-600/10 p-2 rounded-full mr-3">
+                                <i data-feather="check-circle" class="text-red-500 w-5 h-5"></i>
+                            </div>
+                            <span>Jakość</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nasze Realizacje</h2>
+                <div class="w-20 h-1 bg-red-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="overflow-hidden rounded-xl" data-aos="fade-up">
+                    <img src="http://static.photos/automotive/640x360/3" alt="Realizacja 1" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <img src="http://static.photos/automotive/640x360/4" alt="Realizacja 2" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <img src="http://static.photos/automotive/640x360/5" alt="Realizacja 3" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Kontakt</h2>
+                <div class="w-20 h-1 bg-red-600 mx-auto"></div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <div class="bg-gray-900 rounded-xl p-8">
+                        <h3 class="text-2xl font-bold mb-6">Dane kontaktowe</h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-red-600/10 p-3 rounded-full mr-4">
+                                    <i data-feather="map-pin" class="text-red-500 w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Adres</h4>
+                                    <p class="text-gray-400">Jawornik 368, 32-400 Myślenice</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-red-600/10 p-3 rounded-full mr-4">
+                                    <i data-feather="phone" class="text-red-500 w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Telefon</h4>
+                                    <p class="text-gray-400">576 953 244</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-red-600/10 p-3 rounded-full mr-4">
+                                    <i data-feather="clock" class="text-red-500 w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Godziny otwarcia</h4>
+                                    <p class="text-gray-400">pon.-pt. 9:00–18:00</p>
+                                    <p class="text-gray-400">sob. 9:00–14:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <div class="bg-gray-900 rounded-xl p-8">
+                        <h3 class="text-2xl font-bold mb-6">Wyślij wiadomość</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label for="name" class="block mb-2">Imię i nazwisko</label>
+                                <input type="text" id="name" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2">Email</label>
+                                <input type="email" id="email" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500">
+                            </div>
+                            <div>
+                                <label for="phone" class="block mb-2">Telefon</label>
+                                <input type="tel" id="phone" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500">
+                            </div>
+                            <div>
+                                <label for="message" class="block mb-2">Wiadomość</label>
+                                <textarea id="message" rows="4" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition">Wyślij</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12" data-aos="fade-up">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2566.123456789012!2d19.987654321!3d49.87654321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDUyJzM1LjYiTiAxOcKwNTknMTUuNiJF!5e0!3m2!1spl!2spl!4v1234567890123!5m2!1spl!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-4">
+                        <div class="logo-container">
+                          <img src="images/logo.png" alt="Auto-korekta Logo">
+                        </div>
+                        <div>
+                            <h2 class="text-xl font-bold">Auto-korekta</h2>
+                            <p class="text-sm text-gray-400">Profesjonalna konserwacja i detailing samochodowy</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="facebook"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2023 Auto-korekta Krzysztof Szafraniec. Wszelkie prawa zastrzeżone.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition">Polityka prywatności</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-sm transition">Regulamin</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Initialize animations
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Initialize feather icons
+        feather.replace();
+    </script>
+</body>
+</html>
